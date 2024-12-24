@@ -1,0 +1,290 @@
+/* General styles for Dark Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #202124; /* Dark background */
+    color: #e8eaed; /* Light text color */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: #e8eaed;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #bdc1c6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #2d2e30; /* Darker form background */
+    border: 1px solid #3c4043;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.tokenizer-option input[type="radio"] {
+    margin-right: 10px;
+    display: none;
+}
+
+ input[type=radio]:checked + li {
+    background-color: #629CF2;
+}
+
+ul.tokenizer-option {
+    padding: 0;
+    list-style-type: none ;
+    
+}
+
+ul.tokenizer-option li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1rem;
+    color: #bdc1c6; /* Slightly muted text */
+    border: #629CF2 2px solid;
+    border-radius: 7px;
+    padding: 9px 9px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #5f6368; /* Border for input fields */
+    border-radius: 4px;
+    background-color: #3c4043; /* Dark input background */
+    color: #e8eaed; /* Light input text */
+    font-size: 1rem;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+    height: 100px;
+}
+
+/*label button{
+    background-color: transparent;
+    border: none;
+    color: grey;
+
+}  */
+label{
+    position: relative;
+}
+
+label button {
+    background-color: transparent;
+    border: none;
+    color: grey;
+    position: absolute;
+    left: 5.3em;
+    bottom : 0.3em;
+    cursor: pointer;
+    font-size: 1.2rem;
+    size: 400px;
+}
+
+label button:hover {
+    color: #ff5c5c; /* Red on hover to indicate delete */
+    background-color: transparent;
+}
+
+ul.tokenizer-option {
+    padding: 0;
+    list-style-type: none;
+    position: relative; /* To ensure absolute positioning works for the button */
+}
+
+ul.tokenizer-option li {
+    display: inline-block;
+    font-size: 1rem;
+    color: #bdc1c6; /* Slightly muted text */
+    border: #629CF2 2px solid;
+    border-radius: 7px;
+    padding: 9px 9px;
+    margin-bottom: 5px;
+    width: 150px; /* Adjust as needed */
+    text-align: center;
+    height: 50px; /* Uniform height */
+    position: relative; /* To contain the button inside each list item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button, input[type="submit"] {
+    background-color: #629CF2; /* Accent color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #4d82d9; /* Slightly darker on hover */
+}
+
+/* Token Display Section */
+.tokens-displayed,
+.characters-displayed {
+    font-size: 2rem;
+    color: #e8eaed;
+    margin-bottom: 10px;
+}
+
+.tokenized-file-download,
+.tokens-display-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #3c4043; /* Darker background for file download box */
+    border: 1px solid #5f6368;
+    border-radius: 6px;
+}
+
+.tokenized-displayed-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #2d2e30; /* Darker background for tokenized text */
+    padding: 10px;
+    border: 1px solid #5f6368;
+    border-radius: 4px;
+    color: #e8eaed;
+}
+
+/* Button styles */
+button {
+    margin-right: 10px;
+}
+
+.download-tokenized-file-button {
+    background-color: #629CF2; /* Accent color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.download-tokenized-file-button:hover {
+    background-color: #4d82d9; /* Darker on hover */
+}
+
+/* Layout adjustments */
+.radioselect, .textboxfield {
+    margin-bottom: 20px;
+}
+
+/* Hide sections by default (use JavaScript to display them) */
+.input-training-file-form,
+.input-tokenizing-file-form,
+.tokenized-file-download {
+    display: none;
+}
+
+
+ul.input-or-train-buttons li{
+    margin-bottom: 12px;
+    list-style-type: none;
+    
+}
+
+div.tokens-and-characters{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+div.tokens-and-characters div{
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    
+} 
+
+div.tokens-and-characters div h2,h3.size{
+    font-size: 1.5em;
+}
+
+
+ul.tokenizer-option-in-tokenize-form li{
+    list-style-type:circle
+}
+
+
+.overlay{
+    position: fixed; /* Stay fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 1000; /* Ensure it's on top of other elements */
+
+}
+
+
+.loading-screen{
+    position: fixed; /* Make the div stay in the same position even when scrolling */
+    top: 50%; /* Move it down halfway */
+    left: 50%; /* Move it right halfway */
+    transform: translate(-50%, -50%); /* Shift it back by half its own width and height to center it */
+    z-index: 1000; /* Make sure it's on top of other elements */
+    padding: 20px;
+}
+
+div.error-message p{
+    color: #ff5c5c;
+}
+
+/* Simplified, compact styling for tokenizer options */
+ul.tokenizer-option-in-tokenize-form {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul.tokenizer-option-in-tokenize-form li {
+    font-size: 0.9rem;
+    color: #e8eaed; /* Light text */
+    margin-bottom: 5px;
+    padding: 5px 0;
+    border-bottom: 1px solid #3c4043; /* Subtle bottom border for separation */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+ul.tokenizer-option-in-tokenize-form input[type="radio"] {
+    margin-right: 8px;
+}
+
+ul.tokenizer-option-in-tokenize-form li:hover {
+    background-color: #3c4043; /* Simple hover effect */
+}
+
+ul.tokenizer-option-in-tokenize-form input[type="radio"]:checked + li {
+    background-color: #2d2e30; /* Slight background change on selection */
+    color: #629CF2; /* Accent color */
+}

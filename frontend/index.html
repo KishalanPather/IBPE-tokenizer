@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBPE Tokenizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>IBPE Tokenizer</h1>
+    <div class="information">
+        <p>Tokens are common sequences of characters found in a set of text. The BPE tokenizer is a subword tokenization algorithm that is used as a crucial preprocessing step in Natural Language Processing(NLP).</p>
+        <p>This project allows you to experiment with the BPE tokenization algorithm by tokenizing text, training using an inputted text file or tokenizing a text file. </p>
+        <p>Analytics on how well the algorithm performs are displayed as well.</p>
+    </div>
+    <form class="typed-text-form">
+        <p>Enter text below to tokenize:</p>
+
+            <div class="radioselect">
+                <ul class="tokenizer-option">
+                    <!--
+                    <label class="default-tokenizer"><input type ="radio" name ="tokenizer-option" value="tokenizer-1" ><li>Default Tokenizer</li></label>
+                    <label><input type ="radio" name ="tokenizer-option" value="tokenizer-2"><li>Tokenizer 2</li></label>
+                    <label><input type ="radio" name ="tokenizer-option" value="tokenizer-3"><li>Tokenizer 3</li></label>
+                -->
+                </ul>
+            </div>
+            <div class="textboxfield">
+                <textarea id="typedText" class="input-field" name="text" type="text"></textarea> <br>
+                <button class="example-button">Example</button>
+                <input type="submit" class="tokenize-submit" value="Tokenize">
+            </div>
+    </form>
+
+    <ul class="input-or-train-buttons">
+        <li><button class="input-training-file-button">Input training file</button></li>
+        <li><button class="input-tokenizing-file-button">Input tokenizing file</button></li>
+    </ul>
+
+    <div>   <!--hidden until training button is clicked-->
+        <form class="input-training-file-form">
+            <p>Tokenizer name: </p> 
+            <input type="text" id="tokenizer_name" >
+
+            <p>Vocabulary size: </p> 
+            <input type="number"  min =1 id="vocabulary_size">
+
+            <p>Select a file: (only .txt)</p>
+            <input type="file" id="training_file_input" accept=".txt">
+
+
+            <button class="cancel-training-btn">Cancel</button>
+            <input type="submit" class="train-submit-btn" value="Train"></input>
+        </form>
+    </div>
+
+
+    <div> <!--hidden until tokenizing button is clicked-->
+        <form class="input-tokenizing-file-form">
+            <p>File Name: </p> 
+            <input type="text" id="file_name" >
+
+            <ul name="" class="tokenizer-option-in-tokenize-form">
+            </ul>
+
+            <p>Select a file: (only .txt)</p>
+            <input type="file" id="tokenizing_file_input" accept=".txt">
+
+            <button class="cancel-tokenizing-btn">Cancel</button>
+            <input type="submit" class="tokenize-submit-btn" value="Tokenize"></input>
+        </form>
+    </div>
+
+    <div class="tokenized-file-download">   <!--hidden until a file is available for download-->
+        <h2>File has been tokenized.</h2>
+        <p>Download tokenized .txt file:</p>
+        <button class="download-tokenized-file-button"> Download</button>
+    </div>
+
+    <div class="analytics">
+        <div class="tokens-and-characters">
+            <div>
+                <h2>Tokens</h2>
+                <h3 class = "tokens-displayed size">0</h3>
+            </div>
+
+            <div>
+                <h2>Characters</h2>
+                <h3 class="characters-displayed size">0</h3>
+            </div>
+
+            <div>
+                <h2>Token/Word Ratio</h2>
+                <h3 class = "tokenWordRatio">0</h3>
+            </div>
+
+            <div>
+                <h2>% Vocabulary used</h2>
+                <h3 class = "proportionOfVocab">0</h3>
+            </div>
+
+            <div>
+                <h2>Time Taken(s)</h2>
+                <h3 class = "timeTaken">0</h3>
+            </div>
+        </div>
+
+        <div class="text">
+            <p class="tokenized-displayed-text">tokenized highlighted text goes here (only when using the textfield).</p>
+        </div>
+    </div>
+
+    
+
+    <script src="fetch.js"></script>
+    <script src="utility.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
