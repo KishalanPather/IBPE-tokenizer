@@ -1,6 +1,6 @@
 # Running the program
 1. In order to run this program, You will need to have node.js and flask for python installed on your computer. You can find these online. 
-2. Once these are downloaded you can navigate to the project folder and run: “npm install” in the terminal. This will download all the libraries and modules used. However if this does not work, then you can individually install the packages including: express.js, cors, mongoose, flask and flask_cors.
+2. Once these are downloaded you can navigate to the backend folder and run: “npm install” in the terminal. This will download all the libraries and modules used. However if this does not work, then you can individually install the packages including: express.js, cors, mongoose, flask and flask_cors.
 3. Next you must set up the express server by navigating to the backend folder and running “node server” in the terminal. This will start up the server.
 4. Next set up the python server. Navigate to the python file “service.py” and click run. This will set up the server as well. 
 5. Now open the index.html file a browser of your choice and the program should work perfectly.
