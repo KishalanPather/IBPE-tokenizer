@@ -1,5 +1,4 @@
 import heapq
-import tqdm
 
 class Trainer:              # class which is responsible for training tokenizers and creating their vocabularies
     
