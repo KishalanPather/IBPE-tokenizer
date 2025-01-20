@@ -1,3 +1,6 @@
+# Accessing the github link
+Please allow 1-3 minutes for the backend servers to connect. You will know it is connected when the "default tokenizer" is displayed.
+
 # Running the program
 1. In order to run this program, You will need to have node.js and flask for python installed on your computer. You can find these online. 
 2. Once these are downloaded you can navigate to the backend folder and run: “npm install” in the terminal. This will download all the libraries and modules used. However if this does not work, then you can individually install the packages including: express.js, cors, mongoose, flask and flask_cors.
