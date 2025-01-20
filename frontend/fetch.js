@@ -1,7 +1,8 @@
 class Fetch{
-    static async getVocabularies(callback){                
+    static async getVocabularies(callback){    
+        const url = "https://ibpe-tokenizer-node-backend.onrender.com";            
         try{
-            const response = await fetch("http://localhost:3000/all-vocabularies");
+            const response = await fetch(`${url}/all-vocabularies`);
             const data = await response.json();
             callback(data);                 //do what you want to do by calling the callback function
             console.log("vocabularies retrieved!")
@@ -12,14 +13,16 @@ class Fetch{
     }
 
     static deleteVocabulary(id){
-        const endpoint = `http://localhost:3000/vocabularies/${id}`;
+        const url = "https://ibpe-tokenizer-node-backend.onrender.com";
+        const endpoint = `${url}/${id}`;
         fetch(endpoint,{ method: 'DELETE'})
             .then(() => {})
             .catch(err => {console.log("Error: could not delete from the database. Error:", err)})
     }
 
     static addVocabulary(data){
-        const endpoint = "http://localhost:3000/add-vocabulary";
+        const url = "https://ibpe-tokenizer-node-backend.onrender.com";
+        const endpoint = `${url}/add-vocabulary`;
         fetch(endpoint,{
             method: 'POST',
             headers: {
@@ -37,7 +40,8 @@ class Fetch{
     }
 
     static async sendDatatoPython(data){    //async just so receiveDataFromPython() only runs once this has finished running.
-        const endpoint = "http://127.0.0.1:5000/receiver"
+        const url = "https://ibpe-tokenizer-flask-backend.onrender.com";
+        const endpoint = `${url}/receiver`;
         const response = await fetch(endpoint,{
             method: 'POST',
             headers: {
@@ -59,7 +63,8 @@ class Fetch{
     }
 
     static async receiveFromPython(url, callback){
-        const endpoint = `http://127.0.0.1:5000/${url}`;
+        const link = "https://ibpe-tokenizer-flask-backend.onrender.com"
+        const endpoint = `${link}/${url}`;
         try{
             const response = await fetch(endpoint);
             const data = await response.json();
